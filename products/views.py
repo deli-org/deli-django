@@ -40,10 +40,9 @@ class ProductList(APIView):
             org=org, category_id=category_id, name=name)
 
         product.unitprice_set.create(value=unitprice_value)
+        # This would be the same thing as calling:
+        ## UnitPrice.objects.create(product=product, value=unitprice_value)
 
         serializer = ProductSerializer(product)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-        # This would be the same thing as calling:
-        ## UnitPrice.objects.create(product=product, value=unitprice_value)
