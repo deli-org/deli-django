@@ -35,3 +35,11 @@ class SaleListView(APIView):
         serializer = SaleSerializer(sale)
 
         return Response(serializer.data)
+
+
+    def get(self, request):
+        queryset = Sale.objects.filter(paid=False)
+
+        serializer = SaleSerializer(queryset, many=True)
+
+        return Response({'sales': serializer.data})
