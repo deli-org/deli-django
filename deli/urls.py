@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', Login.as_view()),
     path('protected/', Protected.as_view()),
-    path('api/', include('products.urls'))
+    path('api/', include('products.urls')),
+    path('api/', include('sales.urls'))
 ]
