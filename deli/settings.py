@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'categories.apps.CategoriesConfig',
     'products.apps.ProductsConfig',
+    'sales.apps.SalesConfig',
     'rest_framework',
     'rest_framework.authtoken'
 ]
