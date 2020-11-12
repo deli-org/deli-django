@@ -2,22 +2,18 @@ from django.test import TestCase
 from accounts.models import Org
 from categories.models import Category
 from products.models import Product, UnitPrice
+from model_bakery import baker
+import ipdb
 
 # Create your tests here.
 
 
 class ProductTestCase(TestCase):
     def setUp(self):
-        org_data = {'name': 'Cafe test'}
-        self.org = Org.objects.create(**org_data)
+        self.org = baker.make_recipe('accounts.lhama_cafe')
 
-        self.assertEqual(self.org.name, org_data['name'])
-
-        category_data = {'name': 'Coffee', 'org': self.org}
-        self.category = Category.objects.create(**category_data)
-
-        self.assertEqual(self.category.name, category_data['name'])
-        self.assertEqual(self.category.org, category_data['org'])
+        self.category = baker.make_recipe('categories.coffee', org=self.org)
+        ipdb.set_trace()
 
     def test_product_create(self):
         product_data = {'name': 'Espresso',
