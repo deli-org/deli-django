@@ -9,7 +9,7 @@ class Product(models.Model):
     name = models.TextField()
     org = models.ForeignKey(Org, on_delete=models.CASCADE)
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL, null=True)
+        Category, on_delete=models.CASCADE)
 
 
 class UnitPrice(models.Model):
