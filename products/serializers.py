@@ -14,7 +14,6 @@ class ProductSerializer(serializers.Serializer):
     name = serializers.CharField()
 
     # WRITE ONLY
-    category_id = serializers.IntegerField(write_only=True)
     unitprice_value = serializers.IntegerField(write_only=True)
 
     # READ-ONLY

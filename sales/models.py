@@ -10,6 +10,8 @@ class SaleManager(models.Manager):
 
 
 class Sale(models.Model):
+    objects = SaleManager()
+
     DEBIT = 'DEBIT'
     CREDIT = 'CREDIT'
     CASH = 'CASH'
