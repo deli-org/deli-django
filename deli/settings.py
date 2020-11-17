@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'my_secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -88,10 +88,15 @@ WSGI_APPLICATION = 'deli.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'deli',
+        'USER': 'gilairmay',
+        'PASSWORD': '1234',
+        'HOST': '127.0.0.1',
+        'PORT': 5432,
     }
 }
 
