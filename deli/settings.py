@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'my_secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'deli_django_web_1']
 
 
 # Application definition
@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'deli.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'deli',
-        'USER': 'gilairmay',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': 'db',
         'PORT': 5432,
     }
 }
