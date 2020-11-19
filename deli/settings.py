@@ -27,7 +27,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'my_secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'deli_django_web_1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0',
+                 'deli_django_web_1', 'deli-django.herokuapp.com']
 
 
 # Application definition
