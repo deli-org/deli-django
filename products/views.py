@@ -10,13 +10,12 @@ import ipdb
 from .models import Product
 from .serializers import ProductSerializer
 from rest_framework import status
+from accounts.views import Protected
 
 # Create your views here.
 
 
-class ProductList(APIView):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+class ProductList(APIView, Protected):
 
     def get(self, request):
         org = request.user.org

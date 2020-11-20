@@ -6,13 +6,12 @@ from .serializers import SaleSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from .models import Sale, SaleDetail
+from accounts.views import Protected
 
 # Create your views here.
 
 
-class SaleListView(APIView):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+class SaleListView(APIView, Protected):
 
     def post(self, request):
         serializer = SaleSerializer(data=request.data)
