@@ -1,7 +1,10 @@
 version: 2.1
 
+orbs:
+  heroku: circle/heroku@1.2.3
+
 jobs:
-  build:
+  build-and-test:
     machine: true
     steps: 
       - checkout
@@ -15,5 +18,25 @@ jobs:
       - run:
           name: Test
           command: docker-compose run web python manage.py test  
+
+
+workflows:
+  version: 2
+  heroku-test-and-deploy:
+    jobs:
+      - build-and-test:
+          filters:
+            branches:
+              only: master
+
+      - heroku/deploy-via-git:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build-and-test
+      
+
+
 
 
