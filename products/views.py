@@ -15,7 +15,7 @@ from accounts.views import Protected
 # Create your views here.
 
 
-class ProductList(APIView, Protected):
+class ProductList(Protected):
 
     def get(self, request):
         org = request.user.org

@@ -11,7 +11,7 @@ from accounts.views import Protected
 # Create your views here.
 
 
-class SaleListView(APIView, Protected):
+class SaleListView(Protected):
 
     def post(self, request):
         serializer = SaleSerializer(data=request.data)
