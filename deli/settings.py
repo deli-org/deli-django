@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'sales.apps.SalesConfig',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'core.apps.CoreConfig',
 ]
 
 REST_FRAMEWORK = {

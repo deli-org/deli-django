@@ -10,7 +10,7 @@ import ipdb
 from .models import Product
 from .serializers import ProductSerializer
 from rest_framework import status
-from accounts.views import Protected
+from core.behaviors import Protected
 
 # Create your views here.
 
