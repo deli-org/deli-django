@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from core.behaviors import Protected
 
 
 class Login(APIView):
@@ -17,9 +18,7 @@ class Login(APIView):
             return Response({'token': token.key})
 
 
-class Protected(APIView):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+class Protected(Protected):
 
     def get(self, request):
         return Response({'org': request.user.org.name})

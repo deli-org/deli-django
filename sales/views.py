@@ -6,7 +6,7 @@ from .serializers import SaleSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from .models import Sale, SaleDetail
-from core.views import Protected
+from core.behaviors import Protected
 
 # Create your views here.
 
