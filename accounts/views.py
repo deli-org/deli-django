@@ -19,6 +19,5 @@ class Login(APIView):
 
 
 class Protected(Protected):
-
     def get(self, request):
         return Response({'org': request.user.org.name})
