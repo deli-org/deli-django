@@ -27,11 +27,11 @@ class SaleSerializer(serializers.Serializer):
     paid = serializers.BooleanField()
     payment_type = serializers.CharField()
 
+    def get_saledetails(self, sale):
+        saledetails = sale.saledetails
+        return SaleDetailSerializer(saledetails, many=True).data
+
     # READ ONLY
     id = serializers.IntegerField(read_only=True)
     updated_at = serializers.DateTimeField(read_only=True)
     created_at = serializers.DateTimeField(read_only=True)
-
-    def get_saledetails(self, sale):
-        saledetails = sale.saledetails
-        return SaleDetailSerializer(saledetails, many=True).data
