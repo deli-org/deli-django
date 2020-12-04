@@ -22,9 +22,11 @@ class Sale(models.Model):
         (CASH, 'cash')
     ]
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     org = models.ForeignKey(Org, on_delete=models.CASCADE)
     paid = models.BooleanField(default=False)
-    identifier = models.CharField(max_length=100, unique=True)
+    identifier = models.CharField(max_length=100)
     payment_type = models.CharField(
         max_length=6, choices=PAYMENT_CHOICES, null=True)
 

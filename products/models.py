@@ -11,6 +11,9 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
+
 
 class UnitPrice(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)

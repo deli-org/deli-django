@@ -1,0 +1,72 @@
+Categoria,Subcategoria,Produto,Custo,Valor de varejo
+ALMOÇO,Sem Subcategoria,ADICIONAL FRANGO 100G,0,7
+ALMOÇO,Sem Subcategoria,ADICIONAL FRANGO 50G,0,4
+ALMOÇO,Sem Subcategoria,ALMOÇO DIA + MINI SALADA,0,21
+ALMOÇO,Sem Subcategoria,SALADA,0,18
+CAFÉS,Sem Subcategoria,ADICIONAL DE LEITE,0,1
+CAFÉS,Sem Subcategoria,AMERICANO,0,5
+CAFÉS,Sem Subcategoria,CAPUCCINO,0,7
+CAFÉS,Sem Subcategoria,CARIOCA,0,5
+CAFÉS,Sem Subcategoria,COADO,0,6
+CAFÉS,Sem Subcategoria,COADO PEQUENO,0,3
+CAFÉS,Sem Subcategoria,DUPLO MACCHIATO,0,9
+CAFÉS,Sem Subcategoria,ESPRESSO,0,5
+CAFÉS,Sem Subcategoria,ESPRESSO DUPLO,0,8
+CAFÉS,Sem Subcategoria,FRENCH PRESS 300ML,0,8
+CAFÉS,Sem Subcategoria,FRENCH PRESS 600ML,0,14
+CAFÉS,Sem Subcategoria,LATTE,0,7
+CAFÉS,Sem Subcategoria,MACCHIATO,0,6
+CAFÉS,Sem Subcategoria,MOCCHA,0,9
+CAFÉS GELADOS,Sem Subcategoria,AFFOGATO,0,8
+CAFÉS GELADOS,Sem Subcategoria,COLD BREW,0,8
+CAFÉS GELADOS,Sem Subcategoria,ESPRESSO TÔNICA,0,10
+CAFÉS GELADOS,Sem Subcategoria,FRAPPÉ CAFÉ,0,12
+CAFÉS GELADOS,Sem Subcategoria,FRAPPÉ MOCCHA,0,12
+CAFÉS GELADOS,Sem Subcategoria,LATTE GELADO,0,7
+CAFÉS GELADOS,Sem Subcategoria,MOCCHA GELADO,0,10
+CERVEJAS,Sem Subcategoria,STELLA ARTOIS 310ML,0,6
+CHÁ,Sem Subcategoria,CHÁ GELADO,0,7
+CHÁ,Sem Subcategoria,CHÁ QUENTE,0,5
+CHÁ,Sem Subcategoria,MATE BATIDO,0,7
+CHOCOLATE,Sem Subcategoria,CHOCOLATE QUENTE,0,8
+COMBOS,Sem Subcategoria,COMBO BOLO + CAFÉ COADO,0,8.5
+COMBOS,Sem Subcategoria,COMBO SALGADO + CAFÉ COADO,0,9.5
+COMBOS,Sem Subcategoria,DESAYUNO,0,18
+DOCES,Sem Subcategoria,ADICIONAL GRANOLA,0,1
+DOCES,Sem Subcategoria,BOLO FATIA,0,5
+DOCES,Sem Subcategoria,BOLO NO POTE,0,8
+DOCES,Sem Subcategoria,BRIGADEIRO,0,2
+DOCES,Sem Subcategoria,BROWNIE CHOCOLATE,0,5
+DOCES,Sem Subcategoria,COOKIE,0,5
+DOCES,Sem Subcategoria,FOLHADO DOCE,0,5
+DOCES,Sem Subcategoria,FRENCH TOAST,0,5
+DOCES,Sem Subcategoria,MINI BOLO,0,5
+DOCES,Sem Subcategoria,PASTEL DE NATA,0,5
+DOCES,Sem Subcategoria,SALADA DE FRUTAS,0,5
+ESPECIAIS,Sem Subcategoria,BOLO DE CHOCOLATE INTEIRO,0,40
+ESPECIAIS,Sem Subcategoria,CRÉDITO COWORKER,0,0.01
+ESPECIAIS,Sem Subcategoria,POTE MEL,0,20
+OVOS,Sem Subcategoria,OMELETE,0,12
+OVOS,Sem Subcategoria,OVOS MEXIDOS,0,9
+SALGADOS,Sem Subcategoria,AMENDOIM,0,3
+SALGADOS,Sem Subcategoria,BRUSCHETTA,0,9
+SALGADOS,Sem Subcategoria,COXINHA,0,5
+SALGADOS,Sem Subcategoria,EMPADA FRANGO,0,5
+SALGADOS,Sem Subcategoria,EMPADA PALMITO,0,5
+SALGADOS,Sem Subcategoria,EMPANADA,0,5
+SALGADOS,Sem Subcategoria,ESFIHA,0,5
+SALGADOS,Sem Subcategoria,FOLHADO FRANGO,0,5
+SALGADOS,Sem Subcategoria,LHAMAPRESE,0,12
+SALGADOS,Sem Subcategoria,MISTO QUENTE,0,9
+SALGADOS,Sem Subcategoria,PÃO DE QUEIJO,0,3
+SALGADOS,Sem Subcategoria,PÃO NA CHAPA,0,5
+SALGADOS,Sem Subcategoria,PASTEL ASSADO,0,5
+SALGADOS,Sem Subcategoria,QUEIJO QUENTE,0,9
+SALGADOS,Sem Subcategoria,WRAP,0,15
+SOFT DRINKS,Sem Subcategoria,ÁGUA COM GÁS,0,3
+SOFT DRINKS,Sem Subcategoria,ÁGUA SEM GÁS,0,3
+SOFT DRINKS,Sem Subcategoria,ÁGUA TÔNICA,0,4.5
+SOFT DRINKS,Sem Subcategoria,COCA COLA 330ML,0,4.5
+SOFT DRINKS,Sem Subcategoria,COCA ZERO 330ML,0,4.5
+SUCOS,Sem Subcategoria,SUCO POLPA,0,7
+SUCOS,Sem Subcategoria,SUCO VERDE,0,7

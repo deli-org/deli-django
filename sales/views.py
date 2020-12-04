@@ -36,9 +36,8 @@ class SaleListView(APIView):
 
         return Response(serializer.data)
 
-
     def get(self, request):
-        queryset = Sale.objects.filter(paid=False)
+        queryset = Sale.objects.filter(paid=True, org=request.user.org)
 
         serializer = SaleSerializer(queryset, many=True)
 
