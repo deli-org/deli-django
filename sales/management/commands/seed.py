@@ -19,7 +19,7 @@ class Command(BaseCommand):
         self.stdout.write('seeding data...')
         self.create_org_and_user()
         self.create_products_from_csv()
-        self.create_sales_in_last_days(10)
+        self.create_sales_in_last_days(30)
         self.stdout.write('done!')
 
     def create_org_and_user(self):
