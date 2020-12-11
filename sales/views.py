@@ -6,11 +6,17 @@ from .serializers import SaleSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from .models import Sale, SaleDetail
+from categories.models import Category
+from silk.profiling.profiler import silk_profile
+from rest_framework.pagination import LimitOffsetPagination
 
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_headers
+from django.utils.decorators import method_decorator
 # Create your views here.
 
 
-class SaleListView(APIView):
+class SaleListView(APIView, LimitOffsetPagination):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
@@ -36,9 +42,34 @@ class SaleListView(APIView):
 
         return Response(serializer.data)
 
+    @method_decorator(cache_page(60*10))
+    @method_decorator(vary_on_headers('Autorization'))
+    @silk_profile(name='Sale list')
     def get(self, request):
-        queryset = Sale.objects.filter(paid=True, org=request.user.org)
+        queryset = Sale.objects.prefetch_related('saledetails__unitprice').prefetch_related(
+            'saledetails__product__category').filter(paid=True, org=request.user.org)
 
-        serializer = SaleSerializer(queryset, many=True)
+        result_page = self.paginate_queryset(queryset, request, view=self)
+
+        serializer = SaleSerializer(result_page, many=True)
 
         return Response({'sales': serializer.data})
+
+
+class CategoryTotalView(APIView):
+    def get(self, request):
+        org = request.user.org
+        totals = {}
+
+        for category in Category.objects.all():
+            category_total = 0
+            saledetails = SaleDetail.objects.prefetch_related('unitprice').filter(
+                product__category=category, sale__org=org)
+            print(saledetails.explain(analyze=True, verbose=True))
+
+            for saledetail in saledetails:
+                category_total = category_total + saledetail.unitprice.value
+
+            totals[category.name] = category_total
+
+        return Response(totals)
